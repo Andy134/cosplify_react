@@ -12,6 +12,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import ShareIcon from '@material-ui/icons/Share';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     pullRight: {
@@ -21,19 +22,25 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "medium"
     },
     title: {
-        lineHeight: "1.35em"
+        lineHeight: "1.25rem",
+        fontSize: "1rem"
     }
 }));
 
 export default function ImgMediaCard(props) {
 
     const classes = useStyles();
+    const history = useHistory();
     const { title, img, secondary } = props.post;
 
+    function goToPost() {
+        history.push("/posts/" + props.post.id)
+    }
+
     return (
-        <Grid item lg={2} md={3} sm={4} xs={6}>
+        <Grid item lg={3} md={4} sm={6} xs={12}>
             <Card >
-                <CardActionArea>
+                <CardActionArea onClick={goToPost}>
                     <CardMedia
                         component="img"
                         alt={title}
@@ -52,13 +59,13 @@ export default function ImgMediaCard(props) {
                 </CardActionArea>
                 <CardActions disableSpacing>
                     <IconButton aria-label="add to favorites">
-                        <FavoriteIcon className={classes.cardIcon}/>
+                        <FavoriteIcon className={classes.cardIcon} />
                     </IconButton>
                     <IconButton aria-label="share">
-                        <ShareIcon className={classes.cardIcon}/>
+                        <ShareIcon className={classes.cardIcon} />
                     </IconButton>
                     <IconButton aria-label="settings" className={classes.pullRight}>
-                        <MoreVertIcon className={classes.cardIcon}/>
+                        <MoreVertIcon className={classes.cardIcon} />
                     </IconButton>
                 </CardActions>
             </Card>

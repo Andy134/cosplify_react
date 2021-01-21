@@ -11,12 +11,19 @@ import React, { useEffect } from 'react';
 
 const useStyles = makeStyles({
     list: {
-        width: 250,
+        width: 240,
     },
     fullList: {
         width: 'auto',
     },
 });
+
+const menus = [
+    { title: "Cosplay", url: "/category/cosplay" },
+    { title: "Beauty", url: "/category/beauty" },
+    { title: "Most View", url: "/most_view" },
+    { title: "Popular", url: "/popular/" }
+]
 
 export default function SideNav(props) {
 
@@ -26,10 +33,10 @@ export default function SideNav(props) {
         <Drawer anchor={'left'} open={props.open} onClose={props.handleSideNavOpen}>
             <div className={classes.list}>
                 <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                        <ListItem key={index} button key={text}>
+                    {menus.map((menu, index) => (
+                        <ListItem key={index} button>
                             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                            <ListItemText primary={text} />
+                            <ListItemText primary={menu.text} />
                         </ListItem>
                     ))}
                 </List>

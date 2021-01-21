@@ -11,11 +11,8 @@ import { useState } from "react";
 import { Link, useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
-    bgColor: {
-        backgroundColor: '#00b8a9'
-    },
     root: {
-        flexGrow: 1,
+        flexGrow: 1
     },
     menuButton: {
         marginRight: theme.spacing(1),
@@ -53,69 +50,54 @@ function Header(props) {
     }
 
     return (
-        <div className={classes.root}>
-            {/* <FormGroup>
-                <FormControlLabel
-                    control={<Switch checked={auth} onChange={handleChange} aria-label="login switch" />}
-                    label={auth ? 'Logout' : 'Login'}
-                />
-            </FormGroup> */}
-            <AppBar position="static" color='inherit' position='sticky' elevation={1}>
-                <Toolbar>
-                    <IconButton onClick={handleSideNavOpen} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                        <MenuIcon />
-                    </IconButton>
+        <AppBar color='inherit' position='fixed' elevation={1}>
+            <Toolbar>
+                <IconButton onClick={handleSideNavOpen} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                    <MenuIcon />
+                </IconButton>
 
-                    <Typography variant="h6" className={classes.title}>
-                        <Link to="/" className={"navLink"}>
-                            Cosplify
+                <Typography variant="h6" className={classes.title}>
+                    <Link to="/" className={"navLink"}>
+                        Cosplify
                         </Link>
-                    </Typography>
+                </Typography>
 
-                    {auth && (
-                        <div>
-                            <IconButton
-                                aria-label="account of current user"
-                                aria-controls="menu-appbar"
-                                aria-haspopup="true"
-                                onClick={handleMenu}
-                                color="inherit"
-                            >
-                                <AccountCircle />
-                            </IconButton>
-                            <Menu
-                                id="menu-appbar"
-                                anchorEl={anchorEl}
-                                anchorOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'right',
-                                }}
-                                keepMounted
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'right',
-                                }}
-                                open={open}
-                                onClose={handleClose}
-                            >
-                                <MenuItem onClick={handleClose}>My account</MenuItem>
-                                <MenuItem onClick={handleClose}>Favourite</MenuItem>
-                                <Divider />
-                                <MenuItem href="/" onClick={handleClose}>Logout</MenuItem>
-                            </Menu>
-                        </div>
-                    )}
-                </Toolbar>
-            </AppBar>
-        </div>
+                {auth && (
+                    <div>
+                        <IconButton
+                            aria-label="account of current user"
+                            aria-controls="menu-appbar"
+                            aria-haspopup="true"
+                            onClick={handleMenu}
+                            color="inherit"
+                        >
+                            <AccountCircle />
+                        </IconButton>
+                        <Menu
+                            id="menu-appbar"
+                            anchorEl={anchorEl}
+                            anchorOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            open={open}
+                            onClose={handleClose}
+                        >
+                            <MenuItem onClick={handleClose}>My account</MenuItem>
+                            <MenuItem onClick={handleClose}>Favourite</MenuItem>
+                            <Divider />
+                            <MenuItem href="/" onClick={handleClose}>Logout</MenuItem>
+                        </Menu>
+                    </div>
+                )}
+            </Toolbar>
+        </AppBar>
     );
 }
 
 export default Header
-
-    // < ul >
-    //         <li><Link as="li" to="/">Homepage</Link></li>
-    //         <li><Link as="li" to="/category/cosplay">Cosplay</Link></li>
-    //         <li><Link as="li" to="/category/beauty">Beauty</Link></li>
-    //         <li><Link as="li" to="/post/001001">Post</Link></li>
-    //     </ ul >
