@@ -5,9 +5,10 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
+import { AccountCircle, ExitToApp, Favorite } from '@material-ui/icons';
 import MailIcon from '@material-ui/icons/Mail';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const useStyles = makeStyles({
     list: {
@@ -19,10 +20,17 @@ const useStyles = makeStyles({
 });
 
 const menus = [
-    { title: "Cosplay", url: "/category/cosplay" },
-    { title: "Beauty", url: "/category/beauty" },
-    { title: "Most View", url: "/most_view" },
-    { title: "Popular", url: "/popular/" }
+    { title: "Cosplay", url: "/category/cosplay", icon: <InboxIcon /> },
+    { title: "Beauty", url: "/category/beauty", icon: <MailIcon /> },
+    { title: "Uniform", url: "/category/uniform", icon: <MailIcon /> },
+    { title: "Most View", url: "/most_view", icon: <MailIcon /> },
+    { title: "Popular", url: "/popular/", icon: <MailIcon /> }
+]
+
+const myInformation = [
+    { title: "Account", url: "/account", icon: <AccountCircle color="secondary"/> },
+    { title: "Favorite", url: "/favorite", icon: <Favorite color="error"/> },
+    { title: "Logout", url: "/logout", icon: <ExitToApp color="textSecondary"/> }
 ]
 
 export default function SideNav(props) {
@@ -35,77 +43,21 @@ export default function SideNav(props) {
                 <List>
                     {menus.map((menu, index) => (
                         <ListItem key={index} button>
-                            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                            <ListItemText primary={menu.text} />
+                            {/* <ListItemIcon>{menu.icon}</ListItemIcon> */}
+                            <ListItemText primary={menu.title}/>
                         </ListItem>
                     ))}
                 </List>
                 <Divider />
                 <List>
-                    {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                        <ListItem key={index} button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                            <ListItemText primary={text} />
+                    {myInformation.map((menu, index) => (
+                        <ListItem key={index} button>
+                            <ListItemIcon>{menu.icon}</ListItemIcon>
+                            <ListItemText primary={menu.title} />
                         </ListItem>
                     ))}
                 </List>
             </div>
         </Drawer>
     )
-
-    // const [state, setState] = React.useState({
-    //     top: false,
-    //     left: false,
-    //     bottom: false,
-    //     right: false,
-    // });
-    // const toggleDrawer = (anchor, open) => (event) => {
-    //     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-    //         return;
-    //     }
-
-    //     setState({ ...state, [anchor]: open });
-    // };
-
-    // const list = (anchor) => (
-    //     <div
-    //         className={clsx(classes.list, {
-    //             [classes.fullList]: anchor === 'top' || anchor === 'bottom',
-    //         })}
-    //         role="presentation"
-    //         onClick={toggleDrawer(anchor, false)}
-    //         onKeyDown={toggleDrawer(anchor, false)}
-    //     >
-    //         <List>
-    //             {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-    //                 <ListItem button key={text}>
-    //                     <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-    //                     <ListItemText primary={text} />
-    //                 </ListItem>
-    //             ))}
-    //         </List>
-    //         <Divider />
-    //         <List>
-    //             {['All mail', 'Trash', 'Spam'].map((text, index) => (
-    //                 <ListItem button key={text}>
-    //                     <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-    //                     <ListItemText primary={text} />
-    //                 </ListItem>
-    //             ))}
-    //         </List>
-    //     </div>
-    // );
-
-    // return (
-    //     <div>
-    //         {['left', 'right', 'top', 'bottom'].map((anchor) => (
-    //             <React.Fragment key={anchor}>
-    //                 <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-    //                 <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
-    //                     {list(anchor)}
-    //                 </Drawer>
-    //             </React.Fragment>
-    //         ))}
-    //     </div>
-    // );
 }

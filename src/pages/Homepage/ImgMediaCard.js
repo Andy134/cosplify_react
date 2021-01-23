@@ -7,7 +7,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import ShareIcon from '@material-ui/icons/Share';
@@ -23,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         lineHeight: "1.25rem",
-        fontSize: "1rem"
+        fontSize: "1rem",
+        fontWeight: "600"
     }
 }));
 
@@ -31,44 +31,45 @@ export default function ImgMediaCard(props) {
 
     const classes = useStyles();
     const history = useHistory();
-    const { title, img, secondary } = props.post;
+
+    var { title, img, secondary, favourite } = props.post;
 
     function goToPost() {
         history.push("/posts/" + props.post.id)
     }
 
     return (
-        <Grid item lg={3} md={4} sm={6} xs={12}>
-            <Card >
-                <CardActionArea onClick={goToPost}>
-                    <CardMedia
-                        component="img"
-                        alt={title}
-                        height="200"
-                        image={img}
-                        title={title}
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h6" component="h6" className={classes.title}>
-                            {title}
-                        </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            {secondary}
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
-                <CardActions disableSpacing>
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon className={classes.cardIcon} />
-                    </IconButton>
-                    <IconButton aria-label="share">
-                        <ShareIcon className={classes.cardIcon} />
-                    </IconButton>
-                    <IconButton aria-label="settings" className={classes.pullRight}>
-                        <MoreVertIcon className={classes.cardIcon} />
-                    </IconButton>
-                </CardActions>
-            </Card>
-        </Grid>
+            <Grid item lg={3} md={4} sm={6} xs={12}>
+                <Card >
+                    <CardActionArea onClick={goToPost}>
+                        <CardMedia
+                            component="img"
+                            alt={title}
+                            height="200"
+                            image={img}
+                            title={title}
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h6" component="h6" className={classes.title}>
+                                {title}
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" component="p">
+                                {secondary}
+                            </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                    <CardActions disableSpacing>
+                        <IconButton aria-label="add to favorites">
+                            <FavoriteIcon className={classes.cardIcon} />
+                        </IconButton>
+                        <IconButton aria-label="share">
+                            <ShareIcon className={classes.cardIcon} />
+                        </IconButton>
+                        <IconButton aria-label="settings" className={classes.pullRight}>
+                            <MoreVertIcon className={classes.cardIcon} />
+                        </IconButton>
+                    </CardActions>
+                </Card>
+            </Grid>
     );
 }

@@ -1,24 +1,22 @@
-import { Container, Grid } from '@material-ui/core';
+import { CardHeader, Container, Grid, IconButton, Paper, Tab, Tabs, Typography } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import { makeStyles } from '@material-ui/core/styles';
+import { ArrowRight, ArrowRightSharp, KeyboardArrowRight } from '@material-ui/icons';
 import React from 'react';
 import ImgMediaCard from "./ImgMediaCard";
 
-const useStyles = makeStyles((theme) => ({
-    bullet: {
-        display: 'inline-block',
-        margin: '0 2px',
-        transform: 'scale(0.8)',
+const useStyles = makeStyles(() => ({
+    root: {
+        display: 'flex',
+        flexWrap: 'wrap'
     },
-    title: {
-        fontSize: 14,
+    typo: {
+        padding: "1rem",
+        fontSize: "1.2rem",
+        fontWeight: "600",
     },
-    pos: {
-        marginBottom: 12,
-    },
-    control: {
-        padding: theme.spacing(2),
+    pullRight: {
+        marginLeft: 'auto'
     }
 }));
 
@@ -28,6 +26,7 @@ const lstPost = [
         title: "Lorem Ipsum is simply dummy",
         img: "https://i.pinimg.com/564x/a3/12/8d/a3128d4ad2eb6a7d117d65f71afb3e78.jpg",
         secondary: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        favourite: true
     },
     {
         id: 2,
@@ -76,14 +75,83 @@ const lstPost = [
 
 ]
 
+const lstPostDefault = [
+    {
+        id: 1,
+        title: "Lorem Ipsum is simply dummy",
+        img: "https://i.pinimg.com/564x/66/72/02/66720279ae45939c7866b5797a0b8611.jpg",
+        secondary: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+    },
+    {
+        id: 2,
+        title: "Lorem Ipsum is simply dummy",
+        img: "https://i.pinimg.com/564x/66/72/02/66720279ae45939c7866b5797a0b8611.jpg",
+        secondary: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+    },
+    {
+        id: 3,
+        title: "Lorem Ipsum is simply dummy",
+        img: "https://i.pinimg.com/564x/66/72/02/66720279ae45939c7866b5797a0b8611.jpg",
+        secondary: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+    },
+    {
+        id: 4,
+        title: "Lorem Ipsum is simply dummy",
+        img: "https://i.pinimg.com/564x/66/72/02/66720279ae45939c7866b5797a0b8611.jpg",
+        secondary: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+    }
+    ,
+    {
+        id: 5,
+        title: "Lorem Ipsum is simply dummy",
+        img: "https://i.pinimg.com/564x/66/72/02/66720279ae45939c7866b5797a0b8611.jpg",
+        secondary: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+    }
+    ,
+    {
+        id: 6,
+        title: "Lorem Ipsum is simply dummy",
+        img: "https://i.pinimg.com/564x/66/72/02/66720279ae45939c7866b5797a0b8611.jpg",
+        secondary: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+    },
+    {
+        id: 7,
+        title: "Lorem Ipsum is simply dummy",
+        img: "https://i.pinimg.com/564x/66/72/02/66720279ae45939c7866b5797a0b8611.jpg",
+        secondary: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+    },
+    {
+        id: 8,
+        title: "Lorem Ipsum is simply dummy",
+        img: "https://i.pinimg.com/564x/66/72/02/66720279ae45939c7866b5797a0b8611.jpg",
+        secondary: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+    }
+
+]
+
 function Homepage() {
     const classes = useStyles();
-
     return (
         <Container maxWidth="lg">
             <Grid container spacing={2}>
+                <Grid item xs={12}>
+                    <Paper className={classes.root}>
+                        <Typography
+                            indicatorColor="primary"
+                            textColor="primary"
+                            aria-label="disabled tabs example"
+                            className={classes.typo}
+                        >
+                            Recently
+                        </Typography>
+
+                        <IconButton aria-label="delete" disabled color="primary" className={classes.pullRight}>
+                            <KeyboardArrowRight fontSize="large" />
+                        </IconButton>
+                    </Paper>
+                </Grid>
                 {
-                    lstPost.map((post, index) => {
+                    lstPostDefault.map((post, index) => {
                         return <ImgMediaCard key={index} post={post} />
                     })
                 }

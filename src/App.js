@@ -1,10 +1,10 @@
+import Div from '@material-ui/core/CardContent';
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Header from './components/Header';
-import routes from "./route";
 import SideNav from './components/SideNav';
-import Div from '@material-ui/core/CardContent';
+import routes from "./route";
 
 function App() {
 
@@ -17,9 +17,8 @@ function App() {
   return (
     <>
       <Router>
-        <Header handleSideNavOpen={handleSideNavOpen}/>
-        <SideNav open={sideNavToggle} handleSideNavOpen={handleSideNavOpen}/>
-        <Div style={{height:"40px"}}/>
+        <Header handleSideNavOpen={handleSideNavOpen} />
+        <SideNav open={sideNavToggle} handleSideNavOpen={handleSideNavOpen} />
         <Switch>
           {routes.map((route) => <Route path={route.path} exact={route.exact}>{route.component}</Route>)}
         </Switch>
