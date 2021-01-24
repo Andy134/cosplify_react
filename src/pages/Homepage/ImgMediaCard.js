@@ -34,14 +34,14 @@ export default function ImgMediaCard(props) {
 
     var { title, img, secondary, favourite } = props.post;
 
-    function goToPost() {
-        history.push("/posts/" + props.post.id)
+    function goTo() {
+        history.push("/post/" + props.post.id)
     }
 
     return (
-            <Grid item lg={3} md={4} sm={6} xs={12}>
+            <Grid item lg={2} md={3} sm={4} xs={6}>
                 <Card >
-                    <CardActionArea onClick={goToPost}>
+                    <CardActionArea onClick={goTo}>
                         <CardMedia
                             component="img"
                             alt={title}
