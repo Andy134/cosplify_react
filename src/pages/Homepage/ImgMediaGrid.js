@@ -1,12 +1,7 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { Grid } from '@material-ui/core';
 import React from 'react';
 import ImgMediaCard from "./ImgMediaCard";
-
-const useStyles = makeStyles(() => ({
-    root: {
-        marginTop: '8px'
-    }
-}));
+import ImgMediaCard1 from "./ImgMediaCard1";
 
 const lstPost = [
     {
@@ -91,16 +86,33 @@ const lstPostDefault = [
     }
 ]
 
-function ImgMediaCards() {
-    const classes = useStyles();
+
+
+function ImgMediaCards(props) {
+
+    var viewStyle = props.viewStyle;
+
+    function displayMediaCard(post, index){
+        const MediaCardStyles = [
+            <ImgMediaCard key={index} post={post} />, 
+            <ImgMediaCard1 key={index} post={post} />
+        ]
+        return MediaCardStyles[viewStyle];
+    }
+
     return (
-        <>
+        <Grid container spacing={2}>
             {
-                lstPost.map((post, index) => {
-                    return <ImgMediaCard key={index} post={post} />
-                })
+                (viewStyle) ?
+                    lstPostDefault.map((post, index) => {
+                        return displayMediaCard(post, index)
+                    })
+                    :
+                    lstPostDefault.map((post, index) => {
+                        return <ImgMediaCard key={index} post={post} />
+                    })
             }
-        </>
+        </Grid>
     )
 }
 

@@ -1,5 +1,4 @@
-import { Grid, IconButton, Paper, Typography } from '@material-ui/core';
-import { KeyboardArrowRight } from '@material-ui/icons';
+import { Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useHistory } from 'react-router-dom';
 
@@ -20,13 +19,8 @@ const useStyles = makeStyles(() => ({
 function Navbar(props) {
 
     const classes = useStyles();
-    const history = useHistory();
 
     var { title } = props
-
-    function goTo() {
-        history.push(props.url)
-    }
 
     return (
         <Paper className={classes.nav}>
@@ -36,14 +30,9 @@ function Navbar(props) {
                 aria-label="disabled tabs example"
                 className={classes.typo}
                 variant="h6"
-                onClick={goTo}
             >
                 {title}
             </Typography>
-
-            <IconButton color="text-secondary" className={classes.pullRight} onClick={goTo}>
-                <KeyboardArrowRight fontSize="large" />
-            </IconButton>
         </Paper>
     )
 }
