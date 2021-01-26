@@ -92,25 +92,23 @@ function ImgMediaCards(props) {
 
     var viewStyle = props.viewStyle;
 
-    function displayMediaCard(post, index){
+    function displayMediaCard(post, index) {
         const MediaCardStyles = [
-            <ImgMediaCard key={index} post={post} />, 
+            <ImgMediaCard key={index} post={post} />,
             <ImgMediaCard1 key={index} post={post} />
         ]
+        if (!viewStyle) {
+            return MediaCardStyles[0];
+        }
         return MediaCardStyles[viewStyle];
     }
 
     return (
         <Grid container spacing={2}>
             {
-                (viewStyle) ?
-                    lstPostDefault.map((post, index) => {
-                        return displayMediaCard(post, index)
-                    })
-                    :
-                    lstPostDefault.map((post, index) => {
-                        return <ImgMediaCard key={index} post={post} />
-                    })
+                lstPost.map((post, index) => {
+                    return displayMediaCard(post, index)
+                })
             }
         </Grid>
     )
