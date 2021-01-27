@@ -70,20 +70,20 @@ const lstPostDefault = [
         img: "https://i.pinimg.com/564x/66/72/02/66720279ae45939c7866b5797a0b8611.jpg",
         secondary: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     }
-    ,
-    {
-        id: 5,
-        title: "Lorem Ipsum is simply dummy",
-        img: "https://i.pinimg.com/564x/66/72/02/66720279ae45939c7866b5797a0b8611.jpg",
-        secondary: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
-    }
-    ,
-    {
-        id: 6,
-        title: "Lorem Ipsum is simply dummy",
-        img: "https://i.pinimg.com/564x/66/72/02/66720279ae45939c7866b5797a0b8611.jpg",
-        secondary: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
-    }
+    // ,
+    // {
+    //     id: 5,
+    //     title: "Lorem Ipsum is simply dummy",
+    //     img: "https://i.pinimg.com/564x/66/72/02/66720279ae45939c7866b5797a0b8611.jpg",
+    //     secondary: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+    // }
+    // ,
+    // {
+    //     id: 6,
+    //     title: "Lorem Ipsum is simply dummy",
+    //     img: "https://i.pinimg.com/564x/66/72/02/66720279ae45939c7866b5797a0b8611.jpg",
+    //     secondary: "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+    // }
 ]
 
 
@@ -106,7 +106,7 @@ function ImgMediaCards(props) {
     return (
         <Grid container spacing={2}>
             {
-                lstPost.map((post, index) => {
+                lstPostDefault.map((post, index) => {
                     return displayMediaCard(post, index)
                 })
             }
