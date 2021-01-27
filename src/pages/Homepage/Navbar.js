@@ -1,4 +1,4 @@
-import { Grid, IconButton, Paper, Typography } from '@material-ui/core';
+import { Card, CardContent, CardHeader, Grid, IconButton, Paper, Typography } from '@material-ui/core';
 import { KeyboardArrowRight } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 import { useHistory } from 'react-router-dom';
@@ -6,10 +6,12 @@ import { useHistory } from 'react-router-dom';
 const useStyles = makeStyles(() => ({
     nav: {
         display: 'flex',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        paddingTop: '0px',
+        paddingBottom: '0px !important'
     },
     typo: {
-        padding: "1rem",
+        marginTop: ".5rem",
         cursor: "pointer"
     },
     pullRight: {
@@ -29,22 +31,24 @@ function Navbar(props) {
     }
 
     return (
-        <Paper className={classes.nav}>
-            <Typography
-                // indicatorColor="primary"
-                // textColor="primary"
-                aria-label="disabled tabs example"
-                className={classes.typo}
-                variant="h6"
-                onClick={goTo}
-            >
-                {title}
-            </Typography>
+        <Card>
+            <CardContent  className={classes.nav}>
+                <Typography
+                    // indicatorColor="primary"
+                    // textColor="primary"
+                    aria-label="disabled tabs example"
+                    className={classes.typo}
+                    variant="h6"
+                    onClick={goTo}
+                >
+                    {title}
+                </Typography>
 
-            <IconButton color="text-secondary" className={classes.pullRight} onClick={goTo}>
-                <KeyboardArrowRight fontSize="large" />
-            </IconButton>
-        </Paper>
+                <IconButton color="default" className={classes.pullRight} onClick={goTo}>
+                    <KeyboardArrowRight fontSize="medium" />
+                </IconButton>
+            </CardContent>
+        </Card>
     )
 }
 

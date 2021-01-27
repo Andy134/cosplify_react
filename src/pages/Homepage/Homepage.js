@@ -26,7 +26,7 @@ function Homepage() {
             <br />
             <Grid container spacing={2}>
 
-                <Grid item sm={8} xs={12}>
+                <Grid item md={8} xs={12}>
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Navbar title="Popular" url="/category/popular" />
@@ -38,7 +38,7 @@ function Homepage() {
                 </Grid>
 
                 {/* SIDE BAR */}
-                <Grid item sm={4} xs={12} >
+                <Grid item md={4} xs={12} >
                     <Sidebar title="Top day" />
                 </Grid>
             </Grid>

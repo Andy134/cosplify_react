@@ -19,7 +19,7 @@ function App() {
         <Header handleSideNavOpen={handleSideNavOpen} />
         <SideNav open={sideNavToggle} handleSideNavOpen={handleSideNavOpen} />
         <Switch>
-          {routes.map((route) => <Route path={route.path} exact={route.exact}>{route.component}</Route>)}
+          {routes.map((route, index) => <Route key={index} path={route.path} exact={route.exact}>{route.component}</Route>)}
         </Switch>
       </Router>
     </>

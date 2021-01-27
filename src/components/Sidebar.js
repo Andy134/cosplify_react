@@ -1,38 +1,53 @@
-import { Paper, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import { useHistory } from 'react-router-dom';
+import { Card, CardContent, Paper, Tab, Tabs } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(() => ({
-    nav: {
-        display: 'flex',
-        flexWrap: 'wrap'
+const AntTabs = withStyles({
+    root: {
+        borderBottom: '1px solid #e8e8e8',
     },
-    typo: {
-        padding: "1rem",
-        cursor: "pointer"
+    indicator: {
+        backgroundColor: '#1890ff',
     },
-    pullRight: {
-        marginLeft: 'auto'
+})(Tabs)
+
+const AntTab = withStyles(() => ({
+    root: {
+        textTransform: 'none',
+        minWidth: '30%',
+        '&:hover': {
+            color: '#40a9ff'
+        },
+        '&$selected': {
+            color: '#1890ff',
+            fontWeight: 700
+        },
+        '&:focus': {
+            color: '#40a9ff',
+        }
     }
-}));
+}))((props) => <Tab disableRipple {...props} />);
 
 function Navbar(props) {
-
-    const classes = useStyles();
-
     var { title } = props
-
     return (
-        <Paper className={classes.nav}>
-            <Typography
-                // indicatorColor="primary"
-                // textColor="primary"
-                aria-label="disabled tabs example"
-                className={classes.typo}
-                variant="h6"
+        <Paper>
+            <AntTabs
+                variant="fullWidth"
+                indicatorColor="primary"
+                textColor="primary"
+                centered
             >
-                {title}
-            </Typography>
+                <AntTab label="Top Day" aria-label="phone" selected={true} />
+                <AntTab label="Top Month" aria-label="favorite" />
+                <AntTab label="Top Year" aria-label="person" />
+            </AntTabs>
+            <Card>
+                <CardContent>
+                    <div>
+                        Content
+                    </div>
+                </CardContent>
+            </Card>
         </Paper>
     )
 }
