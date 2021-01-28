@@ -1,6 +1,7 @@
 import { Card, CardContent, Grid, Paper, Tab, Tabs, Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
+import { lstPostDefault } from "./../data";
 
 const useStyles = makeStyles(() => ({
 }));
@@ -56,6 +57,9 @@ function Navbar(props) {
                             <Typography>content</Typography>
                         </Grid>
                     </Grid>
+                    <div>
+                        <SidebarTopGrid />
+                    </div>
                 </CardContent>
             </Card>
         </Paper>
@@ -63,3 +67,19 @@ function Navbar(props) {
 }
 
 export default Navbar
+
+function SidebarTopGrid(props) {
+    return (
+        <ul>
+            { lstPostDefault.map((post, index) => { return <SidebarTopPost post={post} /> })}
+        </ul>
+    )
+}
+
+function SidebarTopPost(props) {
+    return (
+        <li>
+            item {props.post.title}
+        </li>
+    )
+}
