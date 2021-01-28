@@ -1,5 +1,6 @@
 import { Card, CardContent, Paper, Tab, Tabs } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
+import { lstPostDefault } from "./../data";
 
 const AntTabs = withStyles({
     root: {
@@ -44,7 +45,7 @@ function Navbar(props) {
             <Card>
                 <CardContent>
                     <div>
-                        Content
+                        <SidebarTopGrid />
                     </div>
                 </CardContent>
             </Card>
@@ -53,3 +54,19 @@ function Navbar(props) {
 }
 
 export default Navbar
+
+function SidebarTopGrid(props) {
+    return (
+        <ul>
+            { lstPostDefault.map((post, index) => { return <SidebarTopPost post={post} /> })}
+        </ul>
+    )
+}
+
+function SidebarTopPost(props) {
+    return (
+        <li>
+            item {props.post.title}
+        </li>
+    )
+}
