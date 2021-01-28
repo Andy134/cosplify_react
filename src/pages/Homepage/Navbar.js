@@ -7,8 +7,8 @@ const useStyles = makeStyles(() => ({
     nav: {
         display: 'flex',
         flexWrap: 'wrap',
-        paddingTop: '0px',
-        paddingBottom: '0px !important'
+        // paddingTop: '0px',
+        paddingBottom: '16px !important'
     },
     typo: {
         marginTop: ".5rem",
