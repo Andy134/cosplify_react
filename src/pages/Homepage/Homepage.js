@@ -39,7 +39,7 @@ function Homepage() {
 
                 {/* SIDE BAR */}
                 <Grid item md={4} xs={12} >
-                    <Sidebar title="Top day" />
+                    <Sidebar/>
                 </Grid>
             </Grid>
         </Container>

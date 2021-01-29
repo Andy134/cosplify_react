@@ -39,7 +39,7 @@ export default function ImgMediaCard(props) {
     }
 
     return (
-            <Grid item md={3} sm={4} xs={6}>
+            <Grid item md={4} xs={6}>
                 <Card >
                     <CardActionArea onClick={goTo}>
                         <CardMedia

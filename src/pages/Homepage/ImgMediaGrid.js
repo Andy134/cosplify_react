@@ -2,7 +2,7 @@ import { Grid } from '@material-ui/core';
 import React, { useState, useEffect } from 'react';
 import ImgMediaCard from "./ImgMediaCard";
 import ImgMediaCard1 from "./ImgMediaCard1";
-import {lstPostDefault} from "./../../data"
+import {lstPostDefault, lstPost} from "./../../data"
 
 function ImgMediaCards(props) {
 
@@ -22,7 +22,7 @@ function ImgMediaCards(props) {
     return (
         <Grid container spacing={2}>
             {
-                lstPostDefault.map((post, index) => {
+                lstPost.map((post, index) => {
                     return displayMediaCard(post, index)
                 })
             }
