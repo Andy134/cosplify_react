@@ -11,7 +11,7 @@ import routes from "./route";
 const useStyles = makeStyles(() => ({
   root: {
     marginTop: '8px',
-    minHeight: '570px'
+    minHeight: '600px'
   }
 }));
 

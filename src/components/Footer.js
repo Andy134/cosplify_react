@@ -4,7 +4,7 @@ import React from 'react';
 
 const useStyles = makeStyles({
     footer: {
-        marginTop: "1rem"
+        bottom: '0px'
     }
 })
 

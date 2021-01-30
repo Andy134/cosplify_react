@@ -10,6 +10,6 @@ body {
     color: black;
 }
 
-.navLink:hover h6, .link:hover h6{
+.navLink:hover, .link:hover h6{
     color: orangered;
 }

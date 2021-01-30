@@ -19,8 +19,12 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         flexGrow: 1,
-        fontSize: '1.2rem',
+        fontSize: '1.2rem'
     },
+    linkTitle: {
+        textDecoration: 'none',
+        color: 'inherit'
+    }
 }));
 
 
@@ -40,7 +44,7 @@ function Header(props) {
         setAnchorEl(event.currentTarget);
     };
 
-    const handleClose = (event) => {
+    const handleClose = () => {
         setAnchorEl(null);
         history.push("/")
     };
@@ -58,7 +62,7 @@ function Header(props) {
                     </IconButton>
 
                     <Typography variant="h6" className={classes.title}>
-                        <Link to="/" className={"navLink"}>
+                        <Link to="/" className={classes.linkTitle}>
                             Cosplify
                         </Link>
                     </Typography>

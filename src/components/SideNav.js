@@ -9,6 +9,7 @@ import { AccountCircle, ExitToApp, Favorite } from '@material-ui/icons';
 import MailIcon from '@material-ui/icons/Mail';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({
     list: {
@@ -28,24 +29,33 @@ const menus = [
 ]
 
 const myInformation = [
-    { title: "Account", url: "/account", icon: <AccountCircle color="secondary"/> },
-    { title: "Favorite", url: "/favorite", icon: <Favorite color="error"/> },
-    { title: "Logout", url: "/logout", icon: <ExitToApp color="textSecondary"/> }
+    { title: "Account", url: "/account", icon: <AccountCircle color="secondary" /> },
+    { title: "Favorite", url: "/favorite", icon: <Favorite color="error" /> },
+    { title: "Logout", url: "/logout", icon: <ExitToApp color="textSecondary" /> }
 ]
 
 export default function SideNav(props) {
 
+    const history = useHistory();
+
     const classes = useStyles();
+
+    function handleLink(url) {
+        props.handleSideNavOpen()
+        history.push(url)
+    }
 
     return (
         <Drawer anchor={'left'} open={props.open} onClose={props.handleSideNavOpen}>
             <div className={classes.list}>
                 <List>
                     {menus.map((menu, index) => (
-                        <ListItem key={index} button>
-                            {/* <ListItemIcon>{menu.icon}</ListItemIcon> */}
-                            <ListItemText primary={menu.title}/>
-                        </ListItem>
+                        <a className="navLink" onClick={() => handleLink(menu.url)} >
+                            <ListItem key={index} button to={menu.url} >
+                                {/* <ListItemIcon>{menu.icon}</ListItemIcon> */}
+                                <ListItemText primary={menu.title} />
+                            </ListItem>
+                        </a>
                     ))}
                 </List>
                 <Divider />
@@ -53,7 +63,7 @@ export default function SideNav(props) {
                     {myInformation.map((menu, index) => (
                         <ListItem key={index} button>
                             <ListItemIcon>{menu.icon}</ListItemIcon>
-                            <ListItemText primary={menu.title} />
+                            <ListItemText className="navLink" primary={menu.title} />
                         </ListItem>
                     ))}
                 </List>
