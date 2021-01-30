@@ -1,11 +1,15 @@
 body {
     /* background-color: #e8eae6; */
     background-color: snow;
-
+    min-height: '900px';
 }
 
-.navLink {
+.navLink, .link {
     cursor: pointer;
     text-decoration: none;
     color: black;
+}
+
+.navLink:hover h6, .link:hover h6{
+    color: orangered;
 }

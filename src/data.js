@@ -44,38 +44,38 @@ export const lstPostDefault = [
     {
         "id": 1,
         "title": "Lorem Ipsum is simply dummy",
-        "img": "https://i.pinimg.com/564x/cd/20/16/cd201632fc46e1760964d9a614b3cb4d.jpg",
+        "img": "https://i.pinimg.com/originals/19/32/4a/19324a087a3ff2fcd50154d9979231c5.gif",
         "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
         "favourite": true
     },
     {
         "id": 2,
         "title": "Lorem Ipsum is simply dummy",
-        "img": "https://i.pinimg.com/564x/cd/20/16/cd201632fc46e1760964d9a614b3cb4d.jpg",
+        "img": "https://i.pinimg.com/originals/19/32/4a/19324a087a3ff2fcd50154d9979231c5.gif",
         "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     },
     {
         "id": 3,
         "title": "Lorem Ipsum is simply dummy",
-        "img": "https://i.pinimg.com/564x/cd/20/16/cd201632fc46e1760964d9a614b3cb4d.jpg",
+        "img": "https://i.pinimg.com/originals/19/32/4a/19324a087a3ff2fcd50154d9979231c5.gif",
         "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     },
     {
         "id": 4,
         "title": "Lorem Ipsum is simply dummy",
-        "img": "https://i.pinimg.com/564x/cd/20/16/cd201632fc46e1760964d9a614b3cb4d.jpg",
+        "img": "https://i.pinimg.com/originals/19/32/4a/19324a087a3ff2fcd50154d9979231c5.gif",
         "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     },
     {
         "id": 5,
         "title": "Lorem Ipsum is simply dummy",
-        "img": "https://i.pinimg.com/564x/cd/20/16/cd201632fc46e1760964d9a614b3cb4d.jpg",
+        "img": "https://i.pinimg.com/originals/19/32/4a/19324a087a3ff2fcd50154d9979231c5.gif",
         "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     },
     {
         "id": 6,
         "title": "Lorem Ipsum is simply dummy",
-        "img": "https://i.pinimg.com/564x/cd/20/16/cd201632fc46e1760964d9a614b3cb4d.jpg",
+        "img": "https://i.pinimg.com/originals/19/32/4a/19324a087a3ff2fcd50154d9979231c5.gif",
         "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     }
 ]

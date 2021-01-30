@@ -39,37 +39,37 @@ export default function ImgMediaCard(props) {
     }
 
     return (
-            <Grid item md={4} xs={6}>
-                <Card >
-                    <CardActionArea onClick={goTo}>
-                        <CardMedia
-                            component="img"
-                            alt={title}
-                            height="200"
-                            image={img}
-                            title={title}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="h6" className={classes.title}>
-                                {title}
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                                {secondary}
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-                    <CardActions disableSpacing>
-                        <IconButton aria-label="add to favorites">
-                            <FavoriteIcon className={classes.cardIcon} />
-                        </IconButton>
-                        <IconButton aria-label="share">
-                            <ShareIcon className={classes.cardIcon} />
-                        </IconButton>
-                        <IconButton aria-label="settings" className={classes.pullRight}>
-                            <MoreVertIcon className={classes.cardIcon} />
-                        </IconButton>
-                    </CardActions>
-                </Card>
-            </Grid>
+        <Grid item md={4} xs={6} className="link">
+            <Card >
+                <CardActionArea onClick={goTo}>
+                    <CardMedia
+                        component="img"
+                        alt={title}
+                        height="200"
+                        image={img}
+                        title={title}
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h6" component="h6" className={classes.title}>
+                            {title}
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            {secondary}
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+                <CardActions disableSpacing>
+                    <IconButton aria-label="add to favorites">
+                        <FavoriteIcon className={classes.cardIcon} />
+                    </IconButton>
+                    <IconButton aria-label="share">
+                        <ShareIcon className={classes.cardIcon} />
+                    </IconButton>
+                    <IconButton aria-label="settings" className={classes.pullRight}>
+                        <MoreVertIcon className={classes.cardIcon} />
+                    </IconButton>
+                </CardActions>
+            </Card>
+        </Grid>
     );
 }

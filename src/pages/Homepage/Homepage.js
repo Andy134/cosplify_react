@@ -1,9 +1,9 @@
-import { Container, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
-import Navbar from './Navbar';
-import ImgMediaGrid from "./ImgMediaGrid";
 import Sidebar from "./../../components/Sidebar";
+import ImgMediaGrid from "./ImgMediaGrid";
+import Navbar from './Navbar';
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
 function Homepage() {
     const classes = useStyles();
     return (
-        <Container maxWidth="lg" className={classes.root}>
+        <>
             <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <Navbar title="Recently" url="/category/recently" />
@@ -26,7 +26,7 @@ function Homepage() {
             <br />
             <Grid container spacing={2}>
 
-                <Grid item md={8} xs={12}>
+                <Grid item sm={8} xs={12}>
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Navbar title="Popular" url="/category/popular" />
@@ -38,11 +38,11 @@ function Homepage() {
                 </Grid>
 
                 {/* SIDE BAR */}
-                <Grid item md={4} xs={12} >
-                    <Sidebar/>
+                <Grid item sm={4} xs={12} >
+                    <Sidebar />
                 </Grid>
             </Grid>
-        </Container>
+        </>
     )
 }
 
