@@ -49,14 +49,17 @@ export default function SideNav(props) {
         <Drawer anchor={'left'} open={props.open} onClose={props.handleSideNavOpen}>
             <div className={classes.list}>
                 <List>
-                    {menus.map((menu, index) => (
-                        <a className="navLink" onClick={() => handleLink(menu.url)} >
-                            <ListItem key={index} button to={menu.url} >
-                                {/* <ListItemIcon>{menu.icon}</ListItemIcon> */}
-                                <ListItemText primary={menu.title} />
-                            </ListItem>
-                        </a>
-                    ))}
+                    {
+                        menus.map((menu, index) => {
+                            let active = (menu.url === history.location.pathname)
+                            return (
+                                <a className={`navLink${(active) ? ' active' : ''}`} onClick={() => handleLink(menu.url)}>
+                                    <ListItem key={index} button to={menu.url} >
+                                        <ListItemText primary={menu.title} />
+                                    </ListItem>
+                                </a>)
+                        })
+                    }
                 </List>
                 <Divider />
                 <List>
@@ -68,6 +71,6 @@ export default function SideNav(props) {
                     ))}
                 </List>
             </div>
-        </Drawer>
+        </Drawer >
     )
 }

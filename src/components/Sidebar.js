@@ -8,20 +8,20 @@ import { Number } from "./../common";
 
 const useStyles = makeStyles(() => ({
     card: {
-        marginTop: '1rem',
-        margin: 'auto',
+        // marginTop: '1rem',
+        // margin: 'auto',
         borderRadius: '0px !important'
     },
     cardContent: {
-        padding: '0px !important'
+        // padding: '0px !important'
     },
     image: {
-        maxWidth: '120px',
-        maxHeight: '120px'
+        maxWidth: '75px',
+        maxHeight: '75px',
     },
     img: {
         maxWidth: '100%',
-        maxHeight: '100%',
+        maxHeight: '100%'
     },
     title: {
         fontWeight: '700'
@@ -38,42 +38,31 @@ const AntTab = withStyles(() => ({
     root: {
         textTransform: 'none',
         minWidth: '30%',
-        fontWeight: 'bold',
-        '&:hover': {
-            color: '#40a9ff',
-        }
-        ,
-        '&:selected': {
-            color: '#40a9ff',
-        }
-        ,
-        '&:focus': {
-            color: '#40a9ff'
-        }
+        fontWeight: 'bold'
     }
 }))((props) => <Tab disableRipple {...props} />);
 
-function Navbar(props) {
+function Navbar() {
     return (
-        <Paper>
-            <Card>
-                <CardContent>
-                    <AntTabs
-                        variant="fullWidth"
-                        indicatorColor="primary"
-                        textColor="primary"
-                        centered
-                    >
-                        <AntTab label="Top Day" aria-label="phone" />
-                        <AntTab label="Top Month" aria-label="favorite" />
-                        <AntTab label="Top Year" aria-label="person" />
-                    </AntTabs>
-                    <Grid container>
-                        <SidebarTopGrid />
-                    </Grid>
-                </CardContent>
-            </Card>
-        </Paper>
+        <Card elevation={1}>
+            <CardContent>
+                <Typography alignItems="center" variant="h6">Most views</Typography>
+                <AntTabs
+                    variant="fullWidth"
+                    indicatorColor="primary"
+                    textColor="primary"
+                    centered
+                >
+                    <AntTab label="Day" aria-label="phone" className="navLink" />
+                    <AntTab label="Month" aria-label="favorite" className="navLink" />
+                    <AntTab label="Year" aria-label="person" className="navLink" />
+                </AntTabs>
+                <br />
+                <Grid container spacing={1}>
+                    <SidebarTopGrid />
+                </Grid>
+            </CardContent>
+        </Card>
     )
 }
 
@@ -91,10 +80,9 @@ function SidebarTopPost(props) {
     const classes = useStyles();
     var { post } = props
     return (
-        // <div className={classes.root}>
-        <Link className="link" to={"/demo"}>
-            <Card className={classes.card} spacing={0} elevation={0} >
-                <CardContent className={classes.cardContent}>
+        <Card className={classes.card} elevation={0} >
+            <CardContent className={classes.cardContent}>
+                <Link className="link" to={"/demo"}>
                     <Grid container spacing={2}>
                         <Grid item xs={4}>
                             <ButtonBase className={classes.image}>
@@ -112,10 +100,8 @@ function SidebarTopPost(props) {
                             </Grid>
                         </Grid>
                     </Grid>
-                </CardContent>
-            </Card>
-        </Link>
-
-        // </div>
+                </Link>
+            </CardContent>
+        </Card >
     );
 }

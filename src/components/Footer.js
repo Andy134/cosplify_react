@@ -1,10 +1,10 @@
+import { Card, CardContent, Container, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, CardContent, CardHeader, Container } from '@material-ui/core';
 import React from 'react';
 
 const useStyles = makeStyles({
     footer: {
-        bottom: '0px'
+        marginTop: '1rem'
     }
 })
 
@@ -13,10 +13,14 @@ export default function Footer() {
     const classes = useStyles();
 
     return (
-        <Container disableGutters className={classes.footer}>
+        <Container className={classes.footer}>
             <Card>
                 <CardContent>
-                    Snowyapp.
+                    <Grid container spacing={1} direction="column">
+                        <Grid item xs>
+                            <Typography >Snowyapp</Typography>
+                        </Grid>
+                    </Grid>
                 </CardContent>
             </Card>
         </Container>

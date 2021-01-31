@@ -2,7 +2,52 @@ export const lstPost = [
     {
         "id": 1,
         "title": "Lorem Ipsum is simply dummy",
-        "img": "https://i.pinimg.com/564x/a3/12/8d/a3128d4ad2eb6a7d117d65f71afb3e78.jpg",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
+        "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "favourite": true
+    },
+    {
+        "id": 2,
+        "title": "Lorem Ipsum is simply dummy",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
+        "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "favourite": true
+    },
+    {
+        "id": 3,
+        "title": "Lorem Ipsum is simply dummy",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
+        "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "favourite": true
+    },
+    {
+        "id": 4,
+        "title": "Lorem Ipsum is simply dummy",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
+        "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "favourite": true
+    },
+    {
+        "id": 5,
+        "title": "Lorem Ipsum is simply dummy",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
+        "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "favourite": true
+    },
+    {
+        "id": 6,
+        "title": "Lorem Ipsum is simply dummy",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
+        "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "favourite": true
+    }
+]
+
+export const lstPost1 = [
+    {
+        "id": 1,
+        "title": "Lorem Ipsum is simply dummy",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
         "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
         "favourite": true
     },
@@ -44,38 +89,62 @@ export const lstPostDefault = [
     {
         "id": 1,
         "title": "Lorem Ipsum is simply dummy",
-        "img": "https://i.pinimg.com/originals/19/32/4a/19324a087a3ff2fcd50154d9979231c5.gif",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
         "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
         "favourite": true
     },
     {
         "id": 2,
         "title": "Lorem Ipsum is simply dummy",
-        "img": "https://i.pinimg.com/originals/19/32/4a/19324a087a3ff2fcd50154d9979231c5.gif",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
         "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     },
     {
         "id": 3,
         "title": "Lorem Ipsum is simply dummy",
-        "img": "https://i.pinimg.com/originals/19/32/4a/19324a087a3ff2fcd50154d9979231c5.gif",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
         "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     },
     {
         "id": 4,
         "title": "Lorem Ipsum is simply dummy",
-        "img": "https://i.pinimg.com/originals/19/32/4a/19324a087a3ff2fcd50154d9979231c5.gif",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
         "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     },
     {
         "id": 5,
         "title": "Lorem Ipsum is simply dummy",
-        "img": "https://i.pinimg.com/originals/19/32/4a/19324a087a3ff2fcd50154d9979231c5.gif",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
         "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     },
     {
         "id": 6,
         "title": "Lorem Ipsum is simply dummy",
-        "img": "https://i.pinimg.com/originals/19/32/4a/19324a087a3ff2fcd50154d9979231c5.gif",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
+        "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+    },
+    {
+        "id": 7,
+        "title": "Lorem Ipsum is simply dummy",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
+        "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+    },
+    {
+        "id": 8,
+        "title": "Lorem Ipsum is simply dummy",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
+        "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+    },
+    {
+        "id": 9,
+        "title": "Lorem Ipsum is simply dummy",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
+        "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+    },
+    {
+        "id": 10,
+        "title": "Lorem Ipsum is simply dummy",
+        "img": "https://i.pinimg.com/564x/d1/e3/94/d1e394fc62fecb39ce6747ee169d2027.jpg",
         "secondary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
     }
 ]
