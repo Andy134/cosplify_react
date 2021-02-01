@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import SideNav from './components/SideNav';
 import routes from "./route";
+import {lstData} from './global/store';
 
 const useStyles = makeStyles(() => ({
   root: {
