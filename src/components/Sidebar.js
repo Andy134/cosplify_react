@@ -46,21 +46,23 @@ function Navbar() {
     return (
         <Card elevation={1}>
             <CardContent>
-                <Typography alignItems="center" variant="h6">Most views</Typography>
                 <AntTabs
                     variant="fullWidth"
                     indicatorColor="primary"
                     textColor="primary"
                     centered
                 >
-                    <AntTab label="Day" aria-label="phone" className="navLink" />
-                    <AntTab label="Month" aria-label="favorite" className="navLink" />
-                    <AntTab label="Year" aria-label="person" className="navLink" />
+                    <AntTab label="Top Day" aria-label="top day" className="navLink" />
+                    <AntTab label="Top Month" aria-label="top month" className="navLink" />
+                    <AntTab label="Top Year" aria-label="top year" className="navLink" />
                 </AntTabs>
                 <br />
                 <Grid container spacing={1}>
                     <SidebarTopGrid />
                 </Grid>
+            </CardContent>
+            <CardContent>
+                <img></img>
             </CardContent>
         </Card>
     )
