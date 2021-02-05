@@ -1,13 +1,13 @@
+import { Container } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
-import { makeStyles } from '@material-ui/core/styles';
-import { Container } from '@material-ui/core';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import SideNav from './components/SideNav';
+import FloatActionButton from './components/FloatActionButton';
 import routes from "./route";
-import {lstData} from './global/store';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -33,6 +33,7 @@ function App() {
           {routes.map((route, index) => <Route key={index} path={route.path} exact={route.exact}>{route.component}</Route>)}
         </Switch>
       </Container>
+      <FloatActionButton />
       <Footer />
     </Router>
   );

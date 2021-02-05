@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 import { Number } from "./../common";
 
 const useStyles = makeStyles(() => ({
+    sectionContent: {
+        paddingBottom: '0.75rem !important'
+    },
     card: {
         // marginTop: '1rem',
         // margin: 'auto',
@@ -21,7 +24,8 @@ const useStyles = makeStyles(() => ({
     },
     img: {
         maxWidth: '100%',
-        maxHeight: '100%'
+        maxHeight: '100%',
+        borderRadius: '4px'
     },
     title: {
         fontWeight: '700'
@@ -43,9 +47,10 @@ const AntTab = withStyles(() => ({
 }))((props) => <Tab disableRipple {...props} />);
 
 function Navbar() {
+    const classes = useStyles();
     return (
         <Card elevation={1}>
-            <CardContent>
+            <CardContent className={classes.sectionContent}>
                 <AntTabs
                     variant="fullWidth"
                     indicatorColor="primary"
@@ -60,9 +65,6 @@ function Navbar() {
                 <Grid container spacing={1}>
                     <SidebarTopGrid />
                 </Grid>
-            </CardContent>
-            <CardContent>
-                <img></img>
             </CardContent>
         </Card>
     )

@@ -52,7 +52,7 @@ export default function ImgMediaCard(props) {
     }
 
     return (
-        <Grid item xs={12} className="link">
+        <Grid item md={6} xs={12} className="link">
             <Card className={classes.root}>
 
                 <CardMedia

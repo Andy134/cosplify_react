@@ -15,13 +15,27 @@ function Homepage() {
                     <ImgMediaGrid />
                 </Grid>
             </Grid>
-            <br />
-            <Grid container spacing={2}>
 
+            <br /><br />
+            <br /><br />
+
+            <Grid container spacing={2}>
                 <Grid item md={9} xs={12}>
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
-                            <Navbar title="Popular" url="/category/popular" />
+                            <Navbar title="Cosplay" url="/category/cosplay" />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <ImgMediaGrid viewStyle={1} />
+                        </Grid>
+                    </Grid>
+
+                    <br /><br />
+                    <br /><br />
+
+                    <Grid container spacing={2}>
+                        <Grid item xs={12}>
+                            <Navbar title="Uniform" url="/category/uniform" />
                         </Grid>
                         <Grid item xs={12}>
                             <ImgMediaGrid viewStyle={1} />
@@ -34,6 +48,9 @@ function Homepage() {
                     <Sidebar />
                 </Grid>
             </Grid>
+
+            <br /><br />
+            <br /><br />
         </>
     )
 }
