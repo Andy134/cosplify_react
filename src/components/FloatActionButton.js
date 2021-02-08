@@ -10,7 +10,7 @@ const useStyles = makeStyles({
         right: "1rem",
         color: "white",
         backgroundColor: "black",
-        opacity: "0.125",
+        opacity: "0.25",
         "&:hover":{
             opacity: "0.5",
             backgroundColor: "black"
@@ -36,7 +36,7 @@ export default function FloatActionButton() {
     )
 
     function scrollFunction() {
-        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
             setShowFAB(true);
         } else {
             setShowFAB(false);

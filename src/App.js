@@ -8,6 +8,7 @@ import Header from './components/Header';
 import SideNav from './components/SideNav';
 import FloatActionButton from './components/FloatActionButton';
 import routes from "./route";
+import ShareButtons from "./components/ShareButtons"
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -25,6 +26,7 @@ function App() {
   }
 
   return (
+    <>
     <Router>
       <Header handleSideNavOpen={handleSideNavOpen} />
       <SideNav open={sideNavToggle} handleSideNavOpen={handleSideNavOpen} />
@@ -32,10 +34,12 @@ function App() {
         <Switch>
           {routes.map((route, index) => <Route key={index} path={route.path} exact={route.exact}>{route.component}</Route>)}
         </Switch>
+        <ShareButtons/>
       </Container>
-      <FloatActionButton />
       <Footer />
     </Router>
+    <FloatActionButton />
+    </>
   );
 }
 
