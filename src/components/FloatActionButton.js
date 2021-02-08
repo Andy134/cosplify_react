@@ -6,12 +6,14 @@ import React from 'react';
 const useStyles = makeStyles({
     fab: {
         position: "fixed",
-        bottom: "3rem",
+        bottom: "1rem",
         right: "1rem",
         color: "white",
         backgroundColor: "black",
+        opacity: "0.125",
         "&:hover":{
-            backgroundColor: "orangeRed"
+            opacity: "0.5",
+            backgroundColor: "black"
         }
     },
     hidden: {
