@@ -1,17 +1,24 @@
 import { Grid } from '@material-ui/core';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { lstPost } from "./../../data";
 import ImgMediaCard from "./ImgMediaCard";
 import ImgMediaCard1 from "./ImgMediaCard1";
-import {lstPostDefault, lstPost} from "./../../data"
+import Grow from '@material-ui/core/Grow';
 
 function ImgMediaCards(props) {
 
+    const [checked, setChecked] = React.useState(true)
     var viewStyle = props.viewStyle;
 
     function displayMediaCard(post, index) {
         const MediaCardStyles = [
-            <ImgMediaCard key={index} post={post} />,
-            <ImgMediaCard1 key={index} post={post} />
+            <Grow in={checked}>
+                <ImgMediaCard key={index} post={post} />
+            </Grow>
+            ,
+            <Grow in={checked}>
+                <ImgMediaCard1 key={index} post={post} />
+            </Grow>
         ]
         if (!viewStyle) {
             return MediaCardStyles[0];
