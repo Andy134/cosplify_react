@@ -16,8 +16,10 @@ function Homepage() {
                 </Grid>
             </Grid>
 
-            <br /><br />
-            <br /><br />
+            <br />
+            {/* <br />
+            <br />
+            <br /> */}
 
             <Grid container spacing={2}>
                 <Grid item md={9} xs={12}>
@@ -30,8 +32,10 @@ function Homepage() {
                         </Grid>
                     </Grid>
 
-                    <br /><br />
-                    <br /><br />
+                    <br />
+                    {/* <br />
+                    <br />
+                    <br /> */}
 
                     <Grid container spacing={2}>
                         <Grid item xs={12}>

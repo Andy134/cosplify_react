@@ -1,4 +1,4 @@
-export const lstPost = [
+export const lstPost1 = [
     {
         "id": 1,
         "title": "Lorem Ipsum is simply dummy",
@@ -43,7 +43,7 @@ export const lstPost = [
     }
 ]
 
-export const lstPost1 = [
+export const lstPost = [
     {
         "id": 1,
         "title": "Lorem Ipsum is simply dummy",

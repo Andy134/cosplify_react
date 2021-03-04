@@ -7,7 +7,7 @@ import Grow from '@material-ui/core/Grow';
 
 function ImgMediaCards(props) {
 
-    const [checked, setChecked] = React.useState(true)
+    const [checked, setChecked] = React.useState(false)
     var viewStyle = props.viewStyle;
 
     function displayMediaCard(post, index) {

@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
         // flex: '1 0 auto',
     },
     cover: {
-        width: '30%',
+        width: '50%',
     },
     cardIcon: {
         fontSize: "medium"
@@ -58,6 +58,7 @@ export default function ImgMediaCard(props) {
                 <CardMedia
                     component="img"
                     className={classes.cover}
+                    height="175"
                     image={img}
                     title={title}
                 />

@@ -29,8 +29,8 @@ const menus = [
 ]
 
 const myInformation = [
-    { title: "Account", url: "/account", icon: <AccountCircle color="secondary" /> },
-    { title: "Favorite", url: "/favorite", icon: <Favorite color="error" /> },
+    { title: "Account", url: "/account", icon: <AccountCircle color="textSecondary" /> },
+    { title: "Favorite", url: "/favorite", icon: <Favorite color="textSecondary" /> },
     { title: "Logout", url: "/logout", icon: <ExitToApp color="textSecondary" /> }
 ]
 

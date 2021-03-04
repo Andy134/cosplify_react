@@ -8,23 +8,25 @@ import { Number } from "./../common";
 
 const useStyles = makeStyles(() => ({
     sectionContent: {
-        paddingBottom: '0.75rem !important'
+        paddingBottom: '1.75rem !important'
     },
     card: {
-        // marginTop: '1rem',
-        // margin: 'auto',
+        marginTop: '0rem',
         borderRadius: '0px !important'
     },
     cardContent: {
-        // padding: '0px !important'
+        paddingLeft: '0 !important',
+        paddingRight: '0 !important',
+        paddingTop: '0.25rem !important',
+        paddingBottom: '1rem !important'
     },
     image: {
-        maxWidth: '75px',
-        maxHeight: '75px',
+        maxWidth: '100%',
+        maxWidth: '100%',
     },
     img: {
-        maxWidth: '100%',
-        maxHeight: '100%',
+        width: '100%',
+        height: '100%',
         borderRadius: '4px'
     },
     title: {
@@ -94,14 +96,12 @@ function SidebarTopPost(props) {
                             </ButtonBase>
                         </Grid>
                         <Grid item xs={8} container alignItems="center">
-                            <Grid item>
                                 <Typography variant="subtitle2" className={classes.title}>
                                     {post.title}
                                 </Typography>
                                 <Typography variant="caption">
-                                    <Number number="120000" /> views
+                                    &nbsp;&nbsp;&nbsp;<Number number="120000" /> views
                                 </Typography>
-                            </Grid>
                         </Grid>
                     </Grid>
                 </Link>
